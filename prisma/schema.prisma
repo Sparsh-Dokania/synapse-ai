@@ -5,6 +5,7 @@
 
 generator client {
   provider = "prisma-client-js"
+  provider = "prisma-client"
 }
 
 datasource db {
@@ -73,4 +74,9 @@ model Verification {
 
   @@index([identifier])
   @@map("verification")
+model Test {
+  id String @id @default(uuid())
+  name String
+  
+  desc String
 }
